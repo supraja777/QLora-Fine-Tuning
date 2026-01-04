@@ -62,19 +62,22 @@ Below is a **Mermaid diagram** illustrating the fine‑tuning workflow with PEFT
 
 ```mermaid
 flowchart LR
-    A[Pretrained LLM (Huge Model)] --> B(Freeze Base Weights)
-    B --> C{Choose Fine‑Tuning Method}
-    C --> D[Full Fine‑Tuning]
+    A[Pretrained LLM - Huge Model] --> B[Freeze Base Weights]
+    B --> C{Choose Fine-Tuning Method}
+    C --> D[Full Fine-Tuning]
     C --> E[LoRA]
     C --> F[QLoRA]
     E --> G[Add LoRA Adapters]
     G --> H[Train Only Adapters]
-    F --> I[Quantize Model (4‑bit)]
+    F --> I[Quantize Model to 4-bit]
     I --> J[Add LoRA Adapters]
     J --> H
     H --> K[Save Adapter Weights]
     D --> L[Save Full Model]
+
 ```
+
+
 
 ---
 
